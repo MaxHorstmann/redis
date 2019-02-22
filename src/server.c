@@ -618,6 +618,10 @@ struct redisCommand redisCommandTable[] = {
      "read-only to-sort @keyspace @dangerous",
      0,NULL,0,0,0,0,0,0},
 
+    {"keyz",keysCommand,2,
+     "read-only to-sort @keyspace @dangerous",
+     0,NULL,0,0,0,0,0,0},
+
     {"scan",scanCommand,-2,
      "read-only random @keyspace",
      0,NULL,0,0,0,0,0,0},
@@ -2103,7 +2107,7 @@ void createSharedObjects(void) {
     shared.czero = createObject(OBJ_STRING,sdsnew(":0\r\n"));
     shared.cone = createObject(OBJ_STRING,sdsnew(":1\r\n"));
     shared.emptyarray = createObject(OBJ_STRING,sdsnew("*0\r\n"));
-    shared.pong = createObject(OBJ_STRING,sdsnew("+PONG\r\n"));
+    shared.pong = createObject(OBJ_STRING,sdsnew("+WUWUWUWUWUWUWUWUWU\r\n"));
     shared.queued = createObject(OBJ_STRING,sdsnew("+QUEUED\r\n"));
     shared.emptyscan = createObject(OBJ_STRING,sdsnew("*2\r\n$1\r\n0\r\n*0\r\n"));
     shared.wrongtypeerr = createObject(OBJ_STRING,sdsnew(
